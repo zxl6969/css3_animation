@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>测试</title>
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide ">
+	        	<img src="img/link.png">
+	        	<img src="img/Pro.png">
+	        	<img src="img/pcf.png">
+	        	<img src="img/iot.png">
+	        	<img src="img/zflbkj.png">
+	        </div>
+	        <div class="swiper-slide">
+	        	<img src="img/I.png">
+	        	<img src="img/O.png">
+	        	<img src="img/T.png">
+				<img src="img/line_left.png">
+				<img src="img/word_iot.png">
+				<img src="img/line_right.png">
+				<img src="img/box_left.png" alt="">
+				<img src="img/box_right.png" alt="">
+				<img src="img/img_net.png" alt="">
+				<img src="img/mouse.png" alt="">
+	        </div>
+	        <div class="swiper-slide">
+	        	<img src="img/bg_zhuan.png"/>
+	      	  	<img src="img/box_03.png"/>
+	      	  	<img src="img/img_zhuan.png"/>
+	      	  	<img src="img/word_c.png"/>
+	      	  	<img src="img/word_f.png"/>
+	      	  	<img src="img/word_p.png"/>
+	        </div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+    	<div class="swiper-pagination"></div>
+	</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/swiper-3.4.2.jquery.min.js"></script>
+	<script>
+		
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        direction: 'vertical',
+	        slidesPerView: 1,
+	        paginationClickable: true,
+	        spaceBetween: 30,
+	        mousewheelControl: true,
+	        onInit : function(){
+	        	$(".swiper-slide").removeClass("active");
+	        	$(".swiper-slide:eq(0)").addClass("active");
+	        },
+	        onSlideChangeStart : function(swiper){
+	        	$(".swiper-slide").removeClass("active");
+	        	$(".swiper-slide:eq("+ swiper.activeIndex +")").addClass("active");
+	        }
+	    });
+    
+	</script>
+</body>
+</html>
